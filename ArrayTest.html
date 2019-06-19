@@ -1,0 +1,26 @@
+<html>
+    <body>
+        <h1>数组的遍历全部数组</h1>
+        <P id=allArray></P>
+        <h2 onmousemove="to()">数组分开 鼠标移到这里</h2>
+        <p id=array></p>
+        <h3>添加数组</h3>
+        <input id=addAr type="text">
+        <button onclick="add()">添加</button>
+        <p id=add></p>
+        <h3>数组排序</h3><button onclick=""></button>
+        <script>
+            var ar1 = ["a1" ,"a2","a3","a4","a5"];
+            document.getElementById('allArray').innerHTML = ar1.toString;  
+            function to(){
+                for(var i = 0 ; i < ar1.length; i++){
+                    document.getElementById('array').innerHTML = ar1[i];
+                }
+            }
+            function add(){
+                ar1.push(document.getElementById('addAr').value)
+                document.getElementById('add').innerHTML = ar1;
+            }
+        </script>
+    </body>
+</html>
